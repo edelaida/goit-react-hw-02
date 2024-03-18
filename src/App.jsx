@@ -2,6 +2,7 @@ import Description from "./components/Description/Description";
 import Feedback from "./components/Feedback/Feedback";
 import Options from "./components/Options/Options";
 import { useEffect, useState } from "react";
+import s from "./components/Options/Options.module.css";
 
 const initialValues = { good: 0, neutral: 0, bad: 0 };
 function App() {
@@ -40,8 +41,8 @@ function App() {
   };
 
   return (
-    <div>
-      <button onClick={handleToggle}>
+    <div className={s.app_div}>
+      <button className={s.but} onClick={handleToggle}>
         {isVisible ? "HIDE" : "SHOW"} react
       </button>
       {isVisible && <h1>goit-react-hw-02</h1>}

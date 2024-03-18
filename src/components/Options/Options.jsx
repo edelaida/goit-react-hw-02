@@ -17,8 +17,7 @@ const Options = ({ handleValue, totalFeedback, ResetFeedback }) => {
 
   const isTotal = totalFeedback !== 0;
   return (
-    <div>
-      <p>Options</p>
+    <div className={s.option_but}>
       <button className={s.but} onClick={() => handleValue("good")}>
         Good
       </button>

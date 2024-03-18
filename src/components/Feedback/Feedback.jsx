@@ -1,6 +1,5 @@
-//import React from "react";
-
 // import { useEffect } from "react";
+import s from "../Options/Options.module.css";
 
 const Feedback = ({ values, total, PositiveFeedback }) => {
   // useEffect(() => {
@@ -8,17 +7,16 @@ const Feedback = ({ values, total, PositiveFeedback }) => {
   // }, [totalFeedback]);
   const isTotal = total === 0;
   return (
-    <div>
-      <p>Feedback</p>
+    <div className={s.Feedback_block}>
       {isTotal ? (
         <p>No feedback yet</p>
       ) : (
         <ul>
-          <li>Good: {values.good}</li>
-          <li>Neutral {values.neutral} </li>
-          <li>Bad {values.bad} </li>
-          <li>Total {total} </li>
-          <li>Positive {PositiveFeedback} </li>
+          <li>Good : {values.good}</li>
+          <li>Neutral : {values.neutral} </li>
+          <li>Bad : {values.bad} </li>
+          <li>Total : {total} </li>
+          <li>Positive : {PositiveFeedback} </li>
         </ul>
       )}
     </div>
